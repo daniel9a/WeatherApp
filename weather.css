@@ -24,7 +24,7 @@ body {
 }
 
 .title {
-
+    font-family: 'IBM Plex Sans Medium',sans-serif; 
 }
 
 .title h1 {
@@ -44,7 +44,9 @@ body {
 }
 
 .title .search {
+    font-family: 'IBM Plex Sans Light',sans-serif; 
     font-size: 20pt;
+    color: white;
     background-color: rgb(59, 61, 156);
     border: none;
 }
@@ -59,6 +61,7 @@ body {
 }
 
 .current {
+    font-family: 'Saira Extra Condensed Light', sans-serif;
     width: 30vw;
     display: flex;
     flex-direction: row;
@@ -87,6 +90,7 @@ body {
 }
 
 .period {
+    font-family: 'Saira Extra Condensed Light', sans-serif;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
