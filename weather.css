@@ -89,6 +89,7 @@ html, body {
 
 .current img {
     width: 200px;
+    margin: 0 1.3em;
 }
 
 .current p {
