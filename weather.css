@@ -1,72 +1,90 @@
-body {
-    height: 100vh;
+html, body {
+    height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
-}
-
-.forecast {
-    width: 100%;
-    background-image: linear-gradient(rgb(73, 138, 220), rgb(98, 59, 156));
-    color: white;
-    padding: 3% 0;
-}
-
-.inner {
-    margin: 0 10%;
-    display: flex;
-    flex-direction: row;
-}
-
-.col1 {
+    font-size: 16px;
     display: flex;
     flex-direction: column;
 }
 
+.forecast {
+    flex: 1;
+    background-image: linear-gradient(rgb(73, 138, 220), rgb(98, 59, 156));
+    color: white;
+    justify-content: stretch;
+}
+
+.inner {
+    margin: 1em 5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+}
+
+.col1 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
 .title {
+    flex: 1;
     font-family: 'IBM Plex Sans Medium',sans-serif; 
 }
 
 .title h1 {
-    font-size: 45pt;
+    /* font-size: 3.75em; */
+    font-size: calc(30px + (60 - 30) * ((100vw - 300px) / (1600 - 300)));    
     margin: 0;
 }
 
-/* TODO: find right color */
 .title h2 {
     margin-top: 0;
-    font-size: 33pt;
+    /* font-size: 2.76em; */
+    font-size: calc(22px + (44 - 22) * ((100vw - 300px) / (1600 - 300)));  
     color: rgb(59, 61, 156);
 }
 
-.title form {
-    font-size: 22pt;
+.title .form {
+    flex: 1;
+    display: inline-block;
+}
+
+.title span{
+    /* font-size: 1.8em; */
+    font-size: calc(20px + (28 - 20) * ((100vw - 300px) / (1600 - 300)));  
 }
 
 .title .search {
     font-family: 'IBM Plex Sans Light',sans-serif; 
-    font-size: 20pt;
+    /* font-size: 1.7em; */
+    font-size: calc(20px + (26 - 20) * ((100vw - 300px) / (1600 - 300)));  
     color: white;
-    background-color: rgb(59, 61, 156);
+    background-color: rgb(46, 49, 146);
     border: none;
+    margin: 0 0.5em;
 }
 
 .title .submit {
-    font-size: 16pt;
-    padding: 5px 32px;
+    /* font-size: 1.5em; */
+    font-size: calc(16px + (22 - 16) * ((100vw - 300px) / (1600 - 300)));  
+    padding: 0.1em 1em;
     text-align: center;
     color: white;
-    background-color: rgb(96, 107, 207);
+    background-color: rgb(127, 137, 204);
     border: none;
 }
 
 .current {
-    font-family: 'Saira Extra Condensed Light', sans-serif;
-    width: 30vw;
-    display: flex;
+    flex: 1;
+    font-family: 'Saira Extra Condensed', sans-serif;
+    margin: 0;
+    display: inline-flex;
     flex-direction: row;
-    justify-content: space-around;
     align-items: center;
+    margin-left: 3em;
 }
 
 .current img {
@@ -74,23 +92,43 @@ body {
 }
 
 .current p {
-    font-size: 25pt;
+    /* font-size: 2.9em; */
+    font-size: calc(24px + (46 - 24) * ((100vw - 300px) / (1600 - 300)));  
+    margin: 0;
 }
 
 .current h1 {
-    font-size: 75pt;
+    /* font-size: 7em; */
+    font-size: calc(56px + (114 - 56) * ((100vw - 300px) / (1600 - 300))); 
+}
+
+.adjust {
+    margin: 0;
 }
 
 .doppler {
-    margin-left: 5vw;
+    margin: auto;
 }
 
 .doppler img {
-    max-width: 300px;
+    /* max-width: 18.75em; */
+    margin: auto;
+    width: calc(100px + (400 - 100) * ((100vw - 200px) / (1600 - 300))); 
+}
+
+#b1 {
+    display: none;
+}
+
+.icon {
+    display: none;
 }
 
 .period {
-    font-family: 'Saira Extra Condensed Light', sans-serif;
+    flex: 1;
+    width: 100%;
+    margin: 0;
+    font-family: 'Saira Extra Condensed', sans-serif;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -103,6 +141,7 @@ body {
 }
 
 .time {
+    margin: 0;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -110,9 +149,11 @@ body {
 }
 
 .temp {
-    margin-top: 0;
+    flex: 1;
+    margin: 0;
     width: 100%;
-    height: 70px;
+    /* font-size: 2em; */
+    font-size: calc(16px + (32 - 16) * ((100vw - 300px) / (1600 - 300)));
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -123,84 +164,244 @@ body {
 .vl {
     position: absolute;
     background-color: transparent;
-    margin: 50px 0;
+    margin: 3.125em 0;
     border-left: 2px solid gray;
-    height: 350px;
+    height: 12em;
 }
 
 .time img {
-    width: 150px;
-    margin-top: 1em;
+    margin: 0;
+    width: calc(50px + (150 - 50) * ((100vw - 300px) / (1600 - 300)));
 }
 
 .time h1 {
-    font-size: 75pt;
+    flex: 1;
+    margin: 0;
+    /* font-size: 6.2em; */
+    font-size: calc(50px + (100 - 50) * ((100vw - 300px) / (1600 - 300)));
 }
 
 @media only screen and (max-width: 768px) {
+    body {
+        font-size: 12px;
+    }
     .title {
         text-align: center;
+        width: 100%;
+        margin: auto;
     }
 
     .inner {
-        margin: 0 10%;
-        display: block;
+        display: inline-block;
     }
     .col1 {
         display: block;
     }
 
+    .tablet {
+        float: left;
+        width: 49%;
+    }
+
     .current {
-        margin-top: 50px;
-        width: 250px;
+        margin-top: 3%;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap; 
-        flex: 100% 0 0
-        /* justify-content: space-around;  */
-        
     }
 
-    .current p {
-        font-size: 25pt;
-        padding-right: 10px;
-        border-right: 3px solid black;
+    .current img {
+        width: 100%;
+        margin: auto;
     }
+
 
     .current .adjust {
-        margin-top: 0;
+        margin: auto;
         order: 1;
         display: flex;
         flex-direction: row;
     }
-    
-    /* .current img {
-        align-items: flex-start;
-        width: 200px;
-    }
 
     .current p {
-        flex-wrap: nowrap;
-        font-size: 25pt;
-        order: 1;
+        padding-right: 12%;
+        border-right: 2px solid black;
+    }
+
+    
+    .doppler {
+        width: 49%;
+        margin-top: 3%;
+        margin-right: auto;
+        float: right;
+    }
+
+    .doppler img {
+        width: 100%;
     }
     
-    .current h1 {
-        flex-wrap: nowrap;
-        font-size: 75pt;
-        order: 1;
-    } */
-
-    .doppler {
-        display: none;
-        margin-left: 5vw;
-        float: right;
-        margin-bottom: 2em;
+    .vl {
+        margin: 0;
+        height: 18em;
     }
+
 }
 
 @media only screen and (max-width: 480px) {
+    body {
+        /* font-size: 7px; */
+    }
+
+    .forecast {
+        flex: 1;
+    }
+
+    .inner {
+        flex: 1;
+        height: 44em;
+        margin: 5em 5em;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .col1 {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+    }
+
+    .title {
+        flex: 1;
+    }
+
+    .title h2 {
+        font-size: 1.5em;
+    }
+
+    .form {
+        text-align: left;
+    }
+
+    .form span {
+        margin: 1em 0 0 0;
+        display: block;
+    }
+
+    .form .search {
+        margin: 0.5em 0 0 0;
+    }
+
+    .tablet {
+        float: none;
+        width: auto;
+    }
+
     .current {
+        flex: 1;
+        width: 70%;
+        margin: auto;
+        margin-top: 1em;
+        float: none;
+    }
+
+    .doppler {
         display: none;
     }
+
+    #b1:checked ~ .forecast {
+        display: none;
+    }
+
+    .icon {
+        display: block;
+        font-size: 5em;
+        margin: 0;
+        text-align: center;
+    }
+
+    .icon:hover {
+        opacity: 0.5;
+    }
+
+    .icon .fa-chevron-up:active .forecast {
+        display: none;
+    }
+
+    .icon .fa-chevron-down {
+        color:  rgb(59, 61, 156);
+        margin: 0;
+    }
+
+    .period {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+        background-color: white;
+        width: 100%;
+        height: 0;
+
+        transition: .5s ease;
+        font-family: 'Saira Extra Condensed', sans-serif;
+        flex: 1;
+        display: flex;
+
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin: 0;
+        padding: 0;
+        
+    }
+
+    #b1:checked ~ .period {
+        height: 100%;
+    }
+
+    .row {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .time {
+        order: 1;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .temp {
+        flex: 1;
+        background-image: none;
+        width: auto;
+        height: auto;
+        font-size: 2em;
+        background-image: none;
+    }
+
+    .time img {
+        width: 130px;
+        margin: 0 2em;
+    }
+
+    .time h1 {
+        flex: 1;
+        margin: auto;
+        font-size: 6.2em;
+        text-align: center;
+    }
+
+    .vl {
+        position: relative;
+        background-color: transparent;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        border-bottom: 2px solid gray;
+        height: auto;
+    }
+
+    
 }
