@@ -35,14 +35,12 @@ html, body {
 }
 
 .title h1 {
-    /* font-size: 3.75em; */
     font-size: calc(30px + (60 - 30) * ((100vw - 300px) / (1600 - 300)));    
     margin: 0;
 }
 
 .title h2 {
     margin-top: 0;
-    /* font-size: 2.76em; */
     font-size: calc(22px + (44 - 22) * ((100vw - 300px) / (1600 - 300)));  
     color: rgb(59, 61, 156);
 }
@@ -53,13 +51,11 @@ html, body {
 }
 
 .title span{
-    /* font-size: 1.8em; */
     font-size: calc(20px + (28 - 20) * ((100vw - 300px) / (1600 - 300)));  
 }
 
 .title .search {
     font-family: 'IBM Plex Sans Light',sans-serif; 
-    /* font-size: 1.7em; */
     font-size: calc(20px + (26 - 20) * ((100vw - 300px) / (1600 - 300)));  
     color: white;
     background-color: rgb(46, 49, 146);
@@ -88,18 +84,17 @@ html, body {
 }
 
 .current img {
-    height: 100px;
+    height: calc(50px + (170 - 50) * ((100vh - 300px) / (1200 - 300)));
+    width: calc(80px + (200 - 80) * ((100vw - 300px) / (1600 - 300)));
     margin: 0 1.3em;
 }
 
 .current p {
-    /* font-size: 2.9em; */
     font-size: calc(24px + (46 - 24) * ((100vw - 300px) / (1600 - 300)));  
     margin: 0;
 }
 
 .current h1 {
-    /* font-size: 7em; */
     font-size: calc(56px + (114 - 56) * ((100vw - 300px) / (1600 - 300))); 
 }
 
@@ -112,7 +107,7 @@ html, body {
 }
 
 .doppler img {
-    /* max-width: 18.75em; */
+    clip-path: circle(40%);
     margin: auto;
     width: calc(100px + (400 - 100) * ((100vw - 200px) / (1600 - 300))); 
 }
@@ -153,7 +148,6 @@ html, body {
     flex: 1;
     margin: 0;
     width: 100%;
-    /* font-size: 2em; */
     font-size: calc(16px + (32 - 16) * ((100vw - 300px) / (1600 - 300)));
     display: flex;
     flex-direction: column;
@@ -167,18 +161,18 @@ html, body {
     background-color: transparent;
     margin: 3.125em 0;
     border-left: 2px solid gray;
-    height: 12em;
+    height: calc(50px + (450 - 50) * ((100vh - 300px) / (1200 - 300)));
 }
 
 .time img {
     margin: 0;
-    height: calc(50px + (150 - 50) * ((100vw - 300px) / (1600 - 300)));
+    height: calc(50px + (130 - 50) * ((100vh - 300px) / (1200 - 300)));
+    width: calc(50px + (150 - 50) * ((100vw - 300px) / (1600 - 300)));
 }
 
 .time h1 {
     flex: 1;
     margin: 0;
-    /* font-size: 6.2em; */
     font-size: calc(50px + (100 - 50) * ((100vw - 300px) / (1600 - 300)));
 }
 
@@ -213,6 +207,7 @@ html, body {
 
     .current img {
         width: 80%;
+        flex-basis: 100%;
         margin: auto;
     }
 
@@ -224,14 +219,15 @@ html, body {
         flex-direction: row;
     }
 
-    .current p {
-        padding-right: 12%;
-        border-right: 2px solid black;
+    .current .line {
+        order: 1;
+        margin: 0;
+        border-left: 2px solid black;
+        height: 6em;
     }
-
     
     .doppler {
-        width: 49%;
+        width: 45%;
         margin-top: 3%;
         margin-right: auto;
         float: right;
@@ -243,7 +239,7 @@ html, body {
     
     .vl {
         margin: 0;
-        height: 18em;
+        height: calc(60px + (450 - 60) * ((100vh - 300px) / (1200 - 300)));
     }
 
 }
@@ -274,6 +270,7 @@ html, body {
 
     .title {
         flex: 1;
+        border: 2px solid red;
     }
 
     .title h2 {
@@ -281,8 +278,8 @@ html, body {
     }
 
     .form {
-        /* border: 2px solid red; */
         text-align: left;
+        border: 2px solid red;
     }
 
     .form span {
@@ -301,10 +298,17 @@ html, body {
 
     .current {
         flex: 1;
-        width: 70%;
+        width: 80%;
         margin: auto;
         margin-top: 1em;
         float: none;
+        border: 2px solid red;
+    }
+
+    .current img {
+        flex-basis: 100%;
+        height: 13em;
+        margin: auto;
     }
 
     .doppler {
@@ -384,7 +388,6 @@ html, body {
     }
 
     .time img {
-        /* width: 75px; */
         margin: 0 2em;
     }
 
