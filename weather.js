@@ -90,6 +90,10 @@ function makeCorsRequest() {
             let formattedTime = hours + ':' + minutes.substr(-2) +" "+ dd;
             let tempInput = "temp"+i;
             let timeInput = "time"+i;
+            if(i == 0)
+            {
+                formattedTime = hours + " "+dd;
+            }
 
             let myIcon = JSON.stringify(object.list[i].weather[0].icon, undefined, 2).trim();
             // console.log(JSON.stringify(object.list[i].weather[0].icon, undefined, 2));
@@ -149,8 +153,16 @@ function makeCorsRequest() {
               document.getElementById('image'+i).src = "assets/thunderstorms.svg";
             }
 
-            document.getElementById(tempInput).innerHTML = tempStr.substring(0, 2);
-            document.getElementById(timeInput).innerHTML = formattedTime;
+            document.getElementById(tempInput).innerHTML = tempStr.substring(0, 2) + "°";
+            if(timeInput === "time0")
+            {
+                document.getElementById(timeInput).innerHTML = "current<br>"+formattedTime;
+            }
+            else
+            {
+                document.getElementById(timeInput).innerHTML = formattedTime;
+            }
+               
         }
     }
   };
