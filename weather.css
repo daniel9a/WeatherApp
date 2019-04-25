@@ -88,7 +88,7 @@ html, body {
 }
 
 .current img {
-    width: 200px;
+    height: 100px;
     margin: 0 1.3em;
 }
 
@@ -172,7 +172,7 @@ html, body {
 
 .time img {
     margin: 0;
-    width: calc(50px + (150 - 50) * ((100vw - 300px) / (1600 - 300)));
+    height: calc(50px + (150 - 50) * ((100vw - 300px) / (1600 - 300)));
 }
 
 .time h1 {
@@ -212,7 +212,7 @@ html, body {
     }
 
     .current img {
-        width: 100%;
+        width: 80%;
         margin: auto;
     }
 
@@ -281,6 +281,7 @@ html, body {
     }
 
     .form {
+        /* border: 2px solid red; */
         text-align: left;
     }
 
@@ -383,7 +384,7 @@ html, body {
     }
 
     .time img {
-        width: 130px;
+        /* width: 75px; */
         margin: 0 2em;
     }
 
