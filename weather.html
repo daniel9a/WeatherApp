@@ -23,28 +23,47 @@
                 <div class="title">
                     <h1>Local Weather Six Hour Forecast</h1>
                     <h2>Northern California with doppler radar</h2>
-                    <form action="#" class="form">
+                    <div class="form">
                         <span>
                             Forecast for
                         </span>
                         <!-- <div class="input"> -->
-                        <input type="text" class="search input" name="location">
-                        <input type="submit" class="submit input" value="submit">
+                        <input type="text" id="city" value="davis" class="search input" name="location">
+                        <button onclick="makeCorsRequest()" type="submit" id="submit" class="submit input"
+                            value="submit"> submit </button>
                         <!-- </div> -->
-                    </form>
+                        </div>
                 </div>
                 <div class="tablet">
                     <div class="current ">
-                        <p class="adjust">current<br>12PM</p>
-                        <img src="assets/fewclouds-day.svg" alt="">
+                        <!-- probably have to adjust the line below -->
+                        <p class="adjust" id="time0">current<br>12PM</p>
+                        <!-- <p class="adjust" id="time0">12pm</p> -->
+                        <img src="assets/fewclouds-day.svg" id="image0" alt="">
                         <div class="line"></div>
-                        <h1 class="adjust">67</h1>
+                        <h1 class="adjust" id="temp0">67</h1>
                     </div>
                 </div>
 
             </div>
             <div class="doppler">
-                <img src="http://radar.weather.gov/ridge/Overlays/Topo/Short/DAX_Topo_Short.jpg" alt="">
+                <div class="allmap">
+
+                
+                    <img class = "topmap topMap"" src="http://radar.weather.gov/ridge/Overlays/Topo/Short/DAX_Topo_Short.jpg " class=" alt="">
+                    <img class="map" src="http://radar.weather.gov/ridge/Overlays/Cities/Short/DAX_City_Short.gif " class="theCities" alt="">
+                                
+                                <div class = "whatever" id="img0"><img src="" class = "radar" id="myImg0" alt=""></div>
+                                <div class = "whatever" id="img1"><img src="" class = "radar" id="myImg1" alt=""></div>
+                                <div class = "whatever"id="img2"><img src="" class = "radar" id="myImg2" alt=""></div>
+                                <div class = "whatever"id="img3"><img src="" class = "radar" id="myImg3" alt=""></div>
+                                <div class = "whatever"id="img4"><img src="" class = "radar" id="myImg4" alt=""></div>
+                                <div class = "whatever"id="img5"><img src="" class = "radar" id="myImg5" alt=""></div>
+                                <div class = "whatever"id="img6"><img src="" class = "radar" id="myImg6" alt=""></div>
+                                <div class = "whatever"id="img7"><img src="" class = "radar" id="myImg7" alt=""></div>
+                                <div class = "whatever"id="img8"><img src="" class = "radar" id="myImg8" alt=""></div>
+                                <div class = "whatever"id="img9"><img src="" class = "radar" id="myImg9" alt=""></div>	
+                </div>
             </div>
         </div>
 
@@ -64,44 +83,44 @@
 
         <div class="row">
             <div class="time">
-                <h3 class="temp">1:00pm</h3>
-                <img src="assets/fewclouds-day.svg" alt="">
-                <h1 class="new">67</h1>
+                <h3 class="temp" id="time1">1:00pm</h3>
+                <img src="assets/fewclouds-day.svg" id="image1" alt="">
+                <h1 class="new" id="temp1">67</h1>
             </div>
             <!-- <div class="vl"></div> -->
         </div>
         <div class="row">
             <div class="time">
-                <h3 class="temp">1:00pm</h3>
-                <img src="assets/fewclouds-day.svg" alt="">
-                <h1>67</h1>
+                <h3 class="temp" id="time2">1:00pm</h3>
+                <img src="assets/fewclouds-day.svg" id="image2" alt="">
+                <h1 id="temp2">67</h1>
             </div>
             <div class="vl"></div>
         </div>
 
         <div class="row">
             <div class="time">
-                <h3 class="temp">1:00pm</h3>
-                <img src="assets/fewclouds-day.svg" alt="">
-                <h1>67</h1>
+                <h3 class="temp" id="time3">1:00pm</h3>
+                <img src="assets/fewclouds-day.svg" id="image3" alt="">
+                <h1 id="temp3">67</h1>
             </div>
             <div class="vl"></div>
         </div>
 
         <div class="row">
             <div class="time">
-                <h3 class="temp">1:00pm</h3>
-                <img src="assets/fewclouds-day.svg" alt="">
-                <h1>67</h1>
+                <h3 class="temp" id="time4">1:00pm</h3>
+                <img src="assets/fewclouds-day.svg" id="image4" alt="">
+                <h1 id="temp4">67</h1>
             </div>
             <div class="vl"></div>
         </div>
 
         <div class="row">
             <div class="time">
-                <h3 class="temp">1:00pm</h3>
-                <img src="assets/fewclouds-day.svg" alt="">
-                <h1>67</h1>
+                <h3 class="temp" id="time5">1:00pm</h3>
+                <img src="assets/fewclouds-day.svg" id="image5" alt="">
+                <h1 id="temp5">67</h1>
             </div>
             <div class="vl"></div>
         </div>
