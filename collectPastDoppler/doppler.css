@@ -1,0 +1,52 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    background-color: blue;
+}
+img {
+    position: absolute;
+    border-radius: 50%;
+}
+.topMap {
+    z-index: 1;
+  }
+.theCities{
+    z-index: 3;
+}
+
+.radar{
+    z-index: 5;
+}
+.img0{
+    display: block;
+}
+.img1{
+    display:block;
+}
+.img2{
+    display: block;
+}
+.img3{
+    display: block;
+}
+.img4{
+    display: block;
+}
+.img5{
+    display: block;
+}
+.img6{
+    display: block;
+}
+.img7{
+    display: block;
+}
+.img8{
+    display: block;
+}
+.img9{
+    display: block;
+}

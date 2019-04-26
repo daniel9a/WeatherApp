@@ -1,0 +1,46 @@
+<!--
+Collects 10 most recent doppler radar files
+-->
+
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="doppler.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Collect past dopper</title>
+</head>
+
+<body>
+<p>
+The Javascript attached to this page collects the 10 most recent doppler image overlays
+from the National Weather Service.  We'll discuss it as an example in class on Friday, probably. 
+</p>
+
+<p>
+In the process, it tries a lot of possible file names that generate "404 Not Found" responses from the 
+server, indicating that the image we are asking for is not found. 
+To block those out of your Javascript console, you can click on the gear icon on the far right and select "Hide network".
+</p>
+
+<div class="Map">
+		<img src="http://radar.weather.gov/ridge/Overlays/Topo/Short/DAX_Topo_Short.jpg " class="topMap" alt="">
+		<img src="http://radar.weather.gov/ridge/Overlays/Cities/Short/DAX_City_Short.gif " class="theCities" alt="">
+					
+					<div id="img0"><img src="https://radar.weather.gov/ridge/RadarImg/N0R/DAX/DAX_20190426_0206_N0R.gif" class = "radar" id="myImg0" alt=""></div>
+					<div id="img1"><img src="https://radar.weather.gov/ridge/RadarImg/N0R/DAX/DAX_20190426_0202_N0R.gif" class = "radar" id="myImg1" alt=""></div>
+					<div id="img2"><img src="https://radar.weather.gov/ridge/RadarImg/N0R/DAX/DAX_20190426_0159_N0R.gif" class = "radar" id="myImg2" alt=""></div>
+					<div id="img3"><img src="https://radar.weather.gov/ridge/RadarImg/N0R/DAX/DAX_20190426_0155_N0R.gif" class = "radar" id="myImg3" alt=""></div>
+					<div id="img4"><img src="https://radar.weather.gov/ridge/RadarImg/N0R/DAX/DAX_20190426_0151_N0R.gif" class = "radar" id="myImg4" alt=""></div>
+					<div id="img5"><img src="https://radar.weather.gov/ridge/RadarImg/N0R/DAX/DAX_20190426_0148_N0R.gif" class = "radar" id="myImg5" alt=""></div>
+					<div id="img6"><img src="https://radar.weather.gov/ridge/RadarImg/N0R/DAX/DAX_20190426_0144_N0R.gif" class = "radar" id="myImg6" alt=""></div>
+					<div id="img7"><img src="https://radar.weather.gov/ridge/RadarImg/N0R/DAX/DAX_20190426_0140_N0R.gif" class = "radar" id="myImg7" alt=""></div>
+					<div id="img8"><img src="https://radar.weather.gov/ridge/RadarImg/N0R/DAX/DAX_20190426_0137_N0R.gif" class = "radar" id="myImg8" alt=""></div>
+					<div id="img9"><img src="http://radar.weather.gov/ridge/RadarImg/N0R/DAX/DAX_20190426_0210_N0R.gif" class = "radar" id="myImg9" alt=""></div>	
+</div>
+
+<!-- execute the Javascript for this page --> 
+<script src="collectPastDoppler.js"></script>
+
+
+</body>
+</html>
