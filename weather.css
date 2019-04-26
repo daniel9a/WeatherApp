@@ -270,7 +270,6 @@ html, body {
 
     .title {
         flex: 1;
-        border: 2px solid red;
     }
 
     .title h2 {
@@ -279,7 +278,6 @@ html, body {
 
     .form {
         text-align: left;
-        border: 2px solid red;
     }
 
     .form span {
@@ -302,7 +300,6 @@ html, body {
         margin: auto;
         margin-top: 1em;
         float: none;
-        border: 2px solid red;
     }
 
     .current img {
