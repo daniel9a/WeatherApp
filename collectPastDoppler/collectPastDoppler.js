@@ -1,16 +1,25 @@
 
 let imageArray = []  // global variable to hold stack of images for animation 
 let count = 0;          // global var
-
+let myCount = 0;
 function animation() {
-	
-	for(i=0; i < 10; i++)
-	{
-		setInterval( function(){
-			document.getElementById('img'+i).style.display="none";
-		}, 800);
-	}
-	
+	setInterval( function(){
+		if(myCount % 10 > 0)
+		{
+			document.getElementById('img'+((myCount % 10)-1)).style.display="none";
+		}
+		else if(myCount % 10 === 0)
+		{
+			document.getElementById('img'+9).style.display="none";
+		}
+		if(document.getElementById('img'+((myCount % 10)-1)) === null)
+		{
+			console.log((myCount % 10));
+		}
+		document.getElementById('img'+((myCount % 10))).style.display="inline";
+		myCount++;
+		
+	}, 500);
 }
 function callAnimation()
 {
@@ -27,7 +36,7 @@ function addToArray(newImage) {
 			console.log("Got 10 doppler images");
 			for(i = 0; i < 10; i++)
 			{
-				document.getElementById('myImg'+i).src = imageArray[i].src;	
+				//document.getElementById('myImg'+i).src = imageArray[i].src;	
 			}
 			// for(j=0; j < 10; j++)
 			// {
@@ -36,7 +45,6 @@ function addToArray(newImage) {
 			// 	}, 800);
 			// }
 
-			callAnimation();
 			//document.getElementById('myImg').src = imageArray[1].src;
 		}
 		// console.log("Size of my imageARRay = "+imageArray.length);
@@ -81,7 +89,7 @@ function getTenImages() {
 // console.log("Size of my imageARRay = "+imageArray.length);
 getTenImages();
 //callAnimation();
-//animation();
+animation();
 
 
 // console.log("Size of my imageARRay = "+imageArray.length);
