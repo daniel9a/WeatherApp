@@ -39,8 +39,10 @@ function addToArray(newImage) {
 			console.log("Got 10 doppler images");
 			for(i = 0; i < 10; i++)
 			{
-				
-			}
+        console.log("hello");
+				document.getElementById('myImg'+i).src=imageArray[i].src;
+      }
+      
 		}
 		
 	}
@@ -253,6 +255,7 @@ function makeCorsRequest() {
 }
 
 // run this code to make request when this script file gets executed 
-makeCorsRequest();
+
 getTenImages();
 animation();
+makeCorsRequest();
